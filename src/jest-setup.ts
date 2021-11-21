@@ -8,3 +8,18 @@ global.fetch = jest.fn(() =>
       }),
   })
 ) as jest.Mock;
+
+const user = {
+  displayName: "Test Name",
+  email: "test@test.com",
+  uid: "12345uid",
+};
+jest.mock("firebase/compat", () => ({
+  initializeApp: jest.fn().mockReturnValue({
+    currentUser: user,
+  }),
+}));
+
+jest.mock("firebase/auth", () => ({
+  getAuth: jest.fn(() => Promise.resolve(user)),
+}));
