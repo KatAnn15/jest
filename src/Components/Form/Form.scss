@@ -1,0 +1,25 @@
+.form-wrapper {
+  margin-bottom: 50px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  .form-input {
+    margin-bottom: 20px;
+    height: 32px;
+    padding-left: 15px;
+  }
+  .submit_btn {
+    padding: 10px 25px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+  }
+  .reset_btn {
+    padding: 10px 25px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    margin-left: 100px;
+  }
+}
